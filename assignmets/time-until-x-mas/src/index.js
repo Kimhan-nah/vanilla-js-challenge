@@ -1,8 +1,8 @@
-const clock = document.querySelector("h2#clock");
+const clockTitle = document.querySelector(".js-clock");
 
 function getClock() {
 	const date = new Date();
-	const xMasYear = date.getFullYear();
+	let xMasYear = date.getFullYear();
 	if (date.getMonth() === 11 && date.getDate() >= 24) {	// after 12-24
 		xMasYear++;
 	}
@@ -13,7 +13,7 @@ function getClock() {
 	const diffMinutes = String(Math.floor(diffTime / (1000 * 60)) % 60).padStart(2, "0");
 	const diffSeconds = String(Math.floor(diffTime / 1000) % 60).padStart(2, "0");
 
-	clock.innerText = `${diffDate}d ${diffHours}h ${diffMinutes}m ${diffSeconds}s`;
+	clockTitle.innerText = `${diffDate}d ${diffHours}h ${diffMinutes}m ${diffSeconds}s`;
 }
 
 getClock();
