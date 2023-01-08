@@ -1,0 +1,3 @@
+[submodule "vanilla-js-chrome-app"]
+	path = vanilla-js-chrome-app
+	url = https://github.com/Kimhan-nah/vanilla-js-chrome-app.git
